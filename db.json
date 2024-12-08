@@ -6,6 +6,14 @@
             "surname": "Holovchuk",
             "photo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7o0a_B1SMwIgxzhb0kSkb6tnp0QZegVq36g&s",
             "balance": 100000
+        },
+
+        {
+            "id": 2,
+            "name": "Roman",
+            "surname": "Navrotskij",
+            "photo_url": "https://img.joomcdn.net/b93766fdc1363145bb69d2b82e8600c9fcaeb0d3_original.jpeg",
+            "balance": 5          
         }
     ]
 }
