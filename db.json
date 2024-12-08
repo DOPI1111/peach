@@ -1,5 +1,11 @@
 {
     "users": [
-        
+        {
+            "id": 1,
+            "name": "Dmytro",
+            "surname": "Holovchuk",
+            "photo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7o0a_B1SMwIgxzhb0kSkb6tnp0QZegVq36g&s",
+            "balance": 100000
+        }
     ]
 }
