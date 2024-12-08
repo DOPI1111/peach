@@ -36,7 +36,12 @@
 
     "products": [
         {
-            
+            "id": 1,
+            "name": "Peach Phone",
+            "description": "Can display 2-lines X 16-characters. Operate with 5V DC.",
+            "price": 125,
+            "author_id": 1,
+            "photo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuYcSggzTr0KqF_ss1k9Fdqc0MgmtN-vFF8w&s"
         }
     ]
 }
