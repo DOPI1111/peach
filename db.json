@@ -57,8 +57,16 @@
         "name": "yabloko",
         "description": "damn",
         "price": 92,
-        "author_id": 2,
+        "author_id": 3,
         "photo_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitdigest.com%2Farticle%2Fservo-motor-working-and-basics&psig=AOvVaw2XmBitQ-x2It6jQXn6HCse&ust=1733749180238000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIi9ypKdmIoDFQAAAAAdAAAAABAO"
-        } 
+        },
+        {
+            "id": 4,
+            "name": "larva",
+            "description": "yo",
+            "price": 19922,
+            "author_id": 4,
+            "photo_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitdigest.com%2Farticle%2Fservo-motor-working-and-basics&psig=AOvVaw2XmBitQ-x2It6jQXn6HCse&ust=1733749180238000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIi9ypKdmIoDFQAAAAAdAAAAABAO"
+            } 
     ]
 }
