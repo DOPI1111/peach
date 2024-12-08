@@ -42,6 +42,15 @@
             "price": 125,
             "author_id": 1,
             "photo_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuYcSggzTr0KqF_ss1k9Fdqc0MgmtN-vFF8w&s"
-        }
+        },
+
+        {
+        "id": 1,
+            "name": "Servo motor",
+            "description": "Spinny boi go brrr",
+            "price": 69,
+            "author_id": 2,
+            "photo_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitdigest.com%2Farticle%2Fservo-motor-working-and-basics&psig=AOvVaw2XmBitQ-x2It6jQXn6HCse&ust=1733749180238000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIi9ypKdmIoDFQAAAAAdAAAAABAO"
+        } 
     ]
 }
