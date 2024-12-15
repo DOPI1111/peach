@@ -3,13 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #6A0DAD ;
     color: #333;
 }
 
 /* Заголовок */
 header {
-    background-color: #007BFF;
+    background-color: #000000;
     color: white;
     padding: 20px;
     text-align: center;
@@ -24,12 +24,12 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #0056b3;
+    background-color: #1C1C1E;
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.1em;
@@ -51,7 +51,7 @@ nav a:hover {
 
 /* Картка товару */
 .card {
-    background: #fff;
+    background: #1C1C1E;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -80,25 +80,26 @@ nav a:hover {
 .card-body h3 {
     font-size: 1.5em;
     margin: 10px 0;
-    color: #333;
+    color: #fafafa;
 }
+
 
 .card-body p {
     font-size: 1em;
-    color: #666;
+    color: #FFFFFF;
     margin: 10px 0;
 }
 
 /* Ціна та кнопка */
 .price {
     font-size: 1.2em;
-    color: #007BFF;
+    color: #413ea1;
     font-weight: bold;
     margin: 10px 0;
 }
 
 button {
-    background-color: #007BFF;
+    background-color: #6f478b;
     color: white;
     border: none;
     border-radius: 5px;
@@ -109,7 +110,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #9374ce;
 }
 
 /* Футер */
