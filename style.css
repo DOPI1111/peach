@@ -1,13 +1,11 @@
-/* Загальні стилі для сторінки */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #6A0DAD ;
+    background-color: #6A0DAD;
     color: #333;
 }
 
-/* Заголовок */
 header {
     background-color: #000000;
     color: white;
@@ -20,7 +18,6 @@ header h1 {
     font-size: 2.5em;
 }
 
-/* Навігація */
 nav {
     display: flex;
     justify-content: center;
@@ -37,19 +34,44 @@ nav a {
 }
 
 nav a:hover {
-    color: #FFD700;
+    color: #5e3757;
 }
 
-/* Контейнер для карток */
+.ad-slider {
+    margin-left: 700px;
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background-color: #3c3c47;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.ad-slider img.active {
+    opacity: 1;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
     justify-content: center;
     padding: 20px;
 }
 
-/* Картка товару */
 .card {
     background: #1C1C1E;
     border-radius: 10px;
@@ -65,14 +87,12 @@ nav a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Зображення товару */
 .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* Тіло картки */
 .card-body {
     padding: 15px;
 }
@@ -83,14 +103,12 @@ nav a:hover {
     color: #fafafa;
 }
 
-
 .card-body p {
     font-size: 1em;
     color: #FFFFFF;
     margin: 10px 0;
 }
 
-/* Ціна та кнопка */
 .price {
     font-size: 1.2em;
     color: #413ea1;
@@ -113,7 +131,6 @@ button:hover {
     background-color: #9374ce;
 }
 
-/* Футер */
 footer {
     background-color: #333;
     color: white;

@@ -46,11 +46,11 @@
 
         {
         "id": 2,
-            "name": "Servo motor",
-            "description": "Spinny boi go brrr",
+            "name": "iFruit",
+            "description": "GTA vibes",
             "price": 69,
             "author_id": 2,
-            "photo_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcircuitdigest.com%2Farticle%2Fservo-motor-working-and-basics&psig=AOvVaw2XmBitQ-x2It6jQXn6HCse&ust=1733749180238000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIi9ypKdmIoDFQAAAAAdAAAAABAO"
+            "photo_url": "https://static.wikia.nocookie.net/gtawiki/images/c/c7/IFruit9iX-GTAV.png/revision/latest/scale-to-width-down/1024?cb=20150506122211"
         },
         {
         "id": 3,
