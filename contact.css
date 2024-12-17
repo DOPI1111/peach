@@ -1,13 +1,14 @@
+/* Загальний стиль */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #6f478b;
+    background-color: #f9f9f9;
     color: #333;
 }
 
 header {
-    background-color: #000000;
+    background-color: #6f478b;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -19,7 +20,7 @@ header h1 {
 }
 
 main {
-    max-width: 600px;
+    max-width: 1030px;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
@@ -27,9 +28,14 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #6f478b;
 }
 
 form label {
@@ -62,10 +68,47 @@ form button:hover {
     background-color: #9374ce;
 }
 
-footer {
-    text-align: center;
+/* Стиль для секції з командою */
+.team-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    overflow-x: auto; /* Додає горизонтальну прокрутку, якщо блоків більше ніж ширина екрану */
     padding: 10px 0;
-    background-color: #333;
-    color: white;
-    margin-top: 20px;
+    white-space: nowrap; /* Забороняє перенесення блоків */
+}
+
+.team-member {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Фіксована ширина для блоків */
+    flex: 0 0 auto; /* Забезпечує, щоб блоки не стискалися */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #6f478b;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: #666;
 }

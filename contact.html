@@ -22,30 +22,64 @@
         <p>&copy; 2024 Shopping Cart Inc.</p>
     </footer>
     <script >$(document).ready(function () {
-        // Створення форми зворотнього зв'язку
+        // Додавання секції з формою
         const contactForm = `
-            <h2>Get in Touch</h2>
-            <p>If you have any questions or feedback, feel free to contact us using the form below.</p>
-            <form id="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
+            <div class="section">
+                <h2>Get in Touch</h2>
+                <p>If you have any questions or feedback, feel free to contact us using the form below.</p>
+                <form id="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
     
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
     
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
     
-                <button type="submit">Send Message</button>
-            </form>
-            <div id="form-feedback" style="display: none; margin-top: 20px;"></div>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div id="form-feedback" style="display: none; margin-top: 20px;"></div>
+            </div>
         `;
     
-        $('#contact-container').html(contactForm);
+        // Додавання секції з командою
+        const teamSection = `
+            <div class="section">
+                <h2>Meet Our Team</h2>
+                <div class="team-section">
+                    <div class="team-member" data-audio="audio/dmitriy.mp3">
+                        <img src="/images/photo_2024-12-17_22-06-16.jpg" alt="Member Photo">
+                        <h3>Dmitriy</h3>
+                        <p>Project Manager</p>
+                        <p>Чувства нет сильнее лени - <br>на колени на колени</p>
+                    </div>
+                    <div class="team-member" data-audio="audio/vadym.mp3">
+                        <img src="/images/s.jpg" alt="Member Photo">
+                        <h3>Vadym<br> Zerno Barabolya</h3>
+                        <p>Lead Developer</p>
+                        <p>Ну скікі можна</p>
+                    </div>
+                    <div class="team-member" data-audio="audio/mike.mp3">
+                        <img src="https://via.placeholder.com/150" alt="Member Photo">
+                        <h3>Mike Johnson</h3>
+                        <p>UI/UX Designer</p>
+                    </div>
+                    <div class="team-member" data-audio="audio/sarah.mp3">
+                        <img src="https://via.placeholder.com/150" alt="Member Photo">
+                        <h3>Sarah Brown</h3>
+                        <p>Marketing Specialist</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    
+        // Додавання контенту до контейнера
+        $('#contact-container').html(contactForm + teamSection);
     
         // Обробка події відправки форми
         $('#contact-form').on('submit', function (event) {
-            event.preventDefault(); // Забороняємо стандартну поведінку
+            event.preventDefault();
     
             const name = $('#name').val().trim();
             const email = $('#email').val().trim();
@@ -56,18 +90,23 @@
                 return;
             }
     
-            // Відображення повідомлення після успішного відправлення
             $('#form-feedback').text(`Thank you, ${name}, for your message! We'll get back to you at ${email}.`)
                 .css('color', 'green')
                 .fadeIn();
     
-            // Очищення полів форми
             $('#contact-form')[0].reset();
-    
-            // Приховати повідомлення через 5 секунд
             setTimeout(() => $('#form-feedback').fadeOut(), 5000);
         });
+    
+        // Відтворення голосового повідомлення при кліку на учасника команди
+        $('.team-member').on('click', function () {
+            const audioSrc = $(this).data('audio');
+            const audio = new Audio(audioSrc); // Створення нового аудіо елементу
+            audio.play(); // Відтворення аудіо
+        });
     });
+    
     </script>
+    <img src="/images/s.jpg" alt="">
 </body>
 </html>
