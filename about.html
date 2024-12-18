@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">Shop</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main id="about-container"></main>
+    <footer>
+        <p>&copy; 2024 Shopping Cart Inc.</p>
+    </footer>
+
+    
+    <style>
+/* Загальний стиль */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #6f478b;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #5e3757;
+}
+
+main {
+    max-width: 1030px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #6f478b;
+}
+
+.section p,
+.section ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.section ul {
+    list-style: disc inside;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+    </style>
+
+
+
+    <script>
+$(document).ready(function () {
+    const aboutContent = `
+        <div class="section">
+            <h2>Who We Are</h2>
+            <p>Welcome to Shopping Cart Inc., your one-stop solution for an amazing shopping experience. We are dedicated to providing you with the best products and exceptional customer service.</p>
+        </div>
+        <div class="section mission">
+            <h2>Our Mission</h2>
+            <p>To create a seamless shopping platform that connects customers with top-quality products and reliable service. We aim to make your shopping simple, fast, and enjoyable!</p>
+        </div>
+        <div class="section vision">
+            <h2>Our Vision</h2>
+            <p>We strive to be a global leader in e-commerce, continually improving and innovating to meet the needs of our customers.</p>
+        </div>
+        <div class="section">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Customer First:</strong> Your satisfaction is our priority.</li>
+                <li><strong>Quality:</strong> We never compromise on quality.</li>
+                <li><strong>Innovation:</strong> We embrace creativity and technology.</li>
+                <li><strong>Integrity:</strong> We build trust through transparency and reliability.</li>
+            </ul>
+        </div>
+    `;
+
+    // Додавання контенту до контейнера
+    $('#about-container').html(aboutContent);
+});
+
+
+    </script>
+</body>
+</html>
