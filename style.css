@@ -1,8 +1,10 @@
+*{
+    font-family: "Nerko One";
+}
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #6A0DAD;
+    background-color: #ffffff;
     color: #333;
 }
 
@@ -34,11 +36,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #5e3757;
+    color: #b9603d;
 }
 
 .ad-slider {
-    margin-left: 700px;
+    margin: 30px auto; /* Центрування по горизонталі */
     border-radius: 20px;
     width: 500px;
     height: 300px;
@@ -46,10 +48,12 @@ nav a:hover {
     position: relative;
     background-color: #3c3c47;
     margin-bottom: 20px;
-    display: flex;
+
+    display: flex; /* Центруємо вміст всередині */
     justify-content: center;
     align-items: center;
 }
+
 
 .ad-slider img {
     position: absolute;
@@ -111,24 +115,36 @@ nav a:hover {
 
 .price {
     font-size: 1.2em;
-    color: #413ea1;
+    color: #d19628;
     font-weight: bold;
     margin: 10px 0;
 }
 
 button {
-    background-color: #6f478b;
+    background: linear-gradient(135deg, #cca37e, #FF7F50, #FFE5B4);
+    background-size: 300% 300%; /* Робимо градієнт ширшим для руху */
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    transition: background 0.4s ease-in-out; /* Плавний перехід для інших властивостей */
+    animation: none; /* Початково без анімації */
 }
 
 button:hover {
-    background-color: #9374ce;
+    animation: gradient-move 2s infinite; /* Додаємо анімацію на hover */
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 footer {
@@ -140,4 +156,30 @@ footer {
     bottom: 0;
     width: 100%;
     margin-top: 20px;
+}
+.ad-wrapper {
+    display: flex; /* Вирівнює елементи в рядок */
+    justify-content: center; /* Центрує рекламний блок */
+    align-items: center; /* Центрує по вертикалі */
+    gap: 20px; /* Відстань між жабками та рекламою */
+    margin: 20px 0;
+}
+
+.frog-left,
+.frog-right {
+    width: 300px; /* Розмір для жабок */
+    height: auto;
+    flex-shrink: 0; /* Не стискає жабок */
+}
+
+.ad-slider {
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background-color: #3c3c47;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
