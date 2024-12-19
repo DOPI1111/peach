@@ -1,4 +1,7 @@
 /* Загальний стиль */
+*{
+    font-family: "Nerko One";
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #6f478b;
+    background-color: #000000;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -33,14 +36,15 @@ main {
 }
 
 .section h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #6f478b;
+    color: #d68746;
 }
 
 form label {
     margin: 10px 0 5px;
     font-weight: bold;
+    color: #d68746;
 }
 
 form input,
@@ -92,6 +96,7 @@ form button:hover {
 .team-member:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #cca37e, #FF7F50, #FFE5B4);
 }
 
 .team-member img {
@@ -104,11 +109,11 @@ form button:hover {
 
 .team-member h3 {
     margin: 10px 0;
-    font-size: 1.2rem;
-    color: #6f478b;
+    font-size: 1.4rem;
+    color: #000000;
 }
 
 .team-member p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #666;
 }
