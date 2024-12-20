@@ -9,16 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Shop</h1>
+        <h1>Welcome to <span>Our</span> Shop</h1>
     </header>
     <nav>
         <a href="contact.html">Contact</a>
         <a href="index.html">Shop</a>
         <a href="about.html">About</a>
+        <a href="cart.html"><img class="imgnav" src="images/cart-2-128.png" alt=""></a>
     </nav>
     <main id="home-container"></main>
     <footer>
@@ -26,7 +28,10 @@
     </footer>
     
     <style>*{
-        font-family: "Nerko One";
+        font-family: "Raleway";
+    }
+    .imgnav{
+        width: 25px;
     }
 body {
     font-family: Arial, sans-serif;
@@ -189,7 +194,9 @@ footer {
     width: 100%;
     margin-top: 20px;
 }
-
+span{
+    color: #FF7F50;
+}
 
     </style>
 
@@ -267,7 +274,7 @@ $(document).ready(function () {
             <p>
                 Ready to start shopping? Explore our collection and add items to your cart today!
             </p>
-            <a href="shop.html" class="button">Start Shopping</a>
+            <a href="index.html" class="button">Start Shopping</a>
         </div>
     `;
 
