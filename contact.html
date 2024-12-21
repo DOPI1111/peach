@@ -16,6 +16,7 @@
     <header>
         <h1>Contact Us</h1>
     </header>
+    <div class="falling-peaches"></div>
     <nav>
         <a href="home.html">Home</a>
         <a href="index.html">Shop</a>
@@ -67,7 +68,7 @@
                     </div>
                     <div class="team-member" data-audio="audio/mike.mp3">
                         <img src="https://via.placeholder.com/150" alt="Member Photo">
-                        <h3>Sasha AKA Bedolaga</h3>
+                        <h3>Sasha <br>AKA Bedolaga</h3>
                         <p>UI/UX Designer</p>
                         <p>еа? а, я думал сова</p>
                     </div>
@@ -110,6 +111,23 @@
             const audioSrc = $(this).data('audio');
             const audio = new Audio(audioSrc); // Створення нового аудіо елементу
             audio.play(); // Відтворення аудіо
+        });
+    
+        // Падіння персиків при кліку на сторінку
+        $(document).on('click', function (e) {
+            const peach = $('<div class="peach"></div>');
+    
+            // Встановлення випадкової позиції та швидкості
+            peach.css({
+                left: Math.random() * $(window).width() + 'px',
+                top: '-100px',
+            });
+    
+            // Додаємо елемент у DOM
+            $('.falling-peaches').append(peach);
+    
+            // Видалення персика після завершення анімації
+            setTimeout(() => peach.remove(), 5000);
         });
     });
     

@@ -7,7 +7,9 @@ body {
     background-color: #FFFFFF;
     color: #333;
 }
-
+span{
+    color: #d47c59;
+}
 header {
     background-color: #000000;
     color: white;
