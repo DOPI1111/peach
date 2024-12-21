@@ -1,6 +1,16 @@
 *{
     font-family: "Raleway";
 }
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 1883px;
+    margin-top: 20px;
+}
 body {
     margin: 0;
     padding: 0;
@@ -227,4 +237,9 @@ footer {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
+}
+.f{
+    width: 300px; /* Розмір для жабок */
+    height: auto;
+    flex-shrink: 0; /* Не стискає жабок */
 }
