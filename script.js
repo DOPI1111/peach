@@ -53,11 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const sortButton = document.getElementById('sort-desc');
+    const sortToggleButton = document.getElementById('sort-toggle');
+    const resetButton = document.getElementById('reset-sort');
     const container = document.querySelector('.container');
+    const originalOrder = Array.from(container.children); // Зберігаємо початковий порядок карток
     let sortOrder = 'desc'; // Початковий порядок сортування
 
-    sortButton.addEventListener('click', () => {
+    // Логіка перемикання сортування
+    sortToggleButton.addEventListener('click', () => {
         const cards = Array.from(container.querySelectorAll('.card'));
 
         // Сортуємо за ціною в залежності від поточного порядку
@@ -74,7 +77,17 @@ document.addEventListener('DOMContentLoaded', () => {
         sortOrder = sortOrder === 'desc' ? 'asc' : 'desc';
 
         // Оновлюємо текст кнопки
-        sortButton.textContent = 
+        sortToggleButton.textContent = 
             sortOrder === 'desc' ? 'Sort by Price: High to Low' : 'Sort by Price: Low to High';
+    });
+
+    // Логіка скидання сортування
+    resetButton.addEventListener('click', () => {
+        // Відновлюємо початковий порядок карток
+        originalOrder.forEach(card => container.appendChild(card));
+
+        // Скидаємо текст і стан кнопки сортування
+        sortOrder = 'desc';
+        sortToggleButton.textContent = 'Sort by Price: High to Low';
     });
 });
