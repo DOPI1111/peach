@@ -46,11 +46,28 @@
         </div>
     </div>
     
-    
+    <div class="filters">
+        <h3>Фільтри</h3>
+        <div>
+            <label for="category">Категорія:</label>
+            <select id="category">
+                <option value="all">Усі</option>
+                <option value="phones">Смартфони</option>
+                <option value="laptops">Ноутбуки</option>
+                <option value="accessories">Аксесуари</option>
+            </select>
+        </div>
+        <div>
+            <label for="price">Ціна:</label>
+            <input type="range" id="price" min="0" max="1000" step="50" value="1000">
+            <span id="price-value">$1000</span>
+        </div>
+        <button id="filter-button">Застосувати фільтри</button>
+    </div>
     
 
     <div class="container">
-        <div class="card">
+        <div class="card" data-category="laptops">
             <img src="/images/DALL·E 2024-12-22 12.41.39 - A sleek and modern laptop designed in the style of Apple, with a minimalist design and a logo of a peach on its lid. The logo is elegantly styled with.webp" alt="Phone 1">
             <div class="card-body">
                 <h3>PakBook 1</h3>
@@ -68,7 +85,7 @@
                 <button>Add to Cart</button>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="phones">
             <img src="/images/DALL·E 2024-12-15 15.07.04 - A futuristic smartphone designed like a peach, with a sleek glossy surface resembling a real peach texture, featuring vibrant orange and pink hues. Th.webp" alt="Phone 3">
             <div class="card-body">
                 <h3>PeachPhone Model 1</h3>
@@ -95,7 +112,7 @@
                 <button>Add to Cart</button>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="laptops">
             <img src="/images/DALL·E 2024-12-15 15.10.32 - A modern and sleek laptop with a minimalist design, displayed on a wooden desk in a bright and cozy room. The laptop's lid features a logo of a styliz.webp" alt="Phone 3">
             <div class="card-body">
                 <h3>PakBook Air</h3>
@@ -113,7 +130,7 @@
                 <button>Add to Cart</button>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="phones">
             <img src="/images/DALL·E 2024-12-22 12.47.26 - A sleek and modern smartphone inspired by the design of an iPhone Pro Max, featuring a minimalist peach logo instead of an apple logo. The phone is sh.webp" alt="Phone 2">
             <div class="card-body">
                 <h3>PeachPhone Pro Max</h3>

@@ -51,3 +51,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const categorySelect = document.getElementById('category');
+    const priceRange = document.getElementById('price');
+    const priceValue = document.getElementById('price-value');
+    const filterButton = document.getElementById('filter-button');
+    const cards = document.querySelectorAll('.card');
+
+    // Оновлюємо відображення ціни
+    priceRange.addEventListener('input', () => {
+        priceValue.textContent = `$${priceRange.value}`;
+    });
+
+    // Фільтруємо товари
+    filterButton.addEventListener('click', () => {
+        const selectedCategory = categorySelect.value;
+        const maxPrice = parseInt(priceRange.value);
+
+        cards.forEach(card => {
+            const category = card.querySelector('h3').textContent.toLowerCase();
+            const price = parseInt(card.querySelector('.price').textContent.replace('$', ''));
+
+            // Перевіряємо, чи відповідає товар обраним критеріям
+            if (
+                (selectedCategory === 'all' || category.includes(selectedCategory)) &&
+                price <= maxPrice
+            ) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
