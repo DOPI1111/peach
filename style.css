@@ -243,33 +243,21 @@ footer {
     height: auto;
     flex-shrink: 0; /* Не стискає жабок */
 }
-.filters {
+.sort-controls {
+    text-align: center;
     margin: 20px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
-.filters h3 {
-    width: 100%;
+.sort-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.filters label {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.filters input, .filters select {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#price-value {
-    font-weight: bold;
-    margin-left: 10px;
+.sort-controls button:hover {
+    background-color: #ff5722;
 }

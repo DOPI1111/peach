@@ -52,37 +52,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
-    const categorySelect = document.getElementById('category');
-    const priceRange = document.getElementById('price');
-    const priceValue = document.getElementById('price-value');
-    const filterButton = document.getElementById('filter-button');
-    const cards = document.querySelectorAll('.card');
+    const sortButton = document.getElementById('sort-desc');
+    const container = document.querySelector('.container');
+    let sortOrder = 'desc'; // Початковий порядок сортування
 
-    // Оновлюємо відображення ціни
-    priceRange.addEventListener('input', () => {
-        priceValue.textContent = `$${priceRange.value}`;
-    });
+    sortButton.addEventListener('click', () => {
+        const cards = Array.from(container.querySelectorAll('.card'));
 
-    // Фільтруємо товари
-    filterButton.addEventListener('click', () => {
-        const selectedCategory = categorySelect.value;
-        const maxPrice = parseInt(priceRange.value);
-
-        cards.forEach(card => {
-            const category = card.querySelector('h3').textContent.toLowerCase();
-            const price = parseInt(card.querySelector('.price').textContent.replace('$', ''));
-
-            // Перевіряємо, чи відповідає товар обраним критеріям
-            if (
-                (selectedCategory === 'all' || category.includes(selectedCategory)) &&
-                price <= maxPrice
-            ) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+        // Сортуємо за ціною в залежності від поточного порядку
+        cards.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('.price').textContent.replace('$', ''));
+            const priceB = parseFloat(b.querySelector('.price').textContent.replace('$', ''));
+            return sortOrder === 'desc' ? priceB - priceA : priceA - priceB;
         });
+
+        // Переміщуємо відсортовані елементи назад у контейнер
+        cards.forEach(card => container.appendChild(card));
+
+        // Змінюємо порядок сортування
+        sortOrder = sortOrder === 'desc' ? 'asc' : 'desc';
+
+        // Оновлюємо текст кнопки
+        sortButton.textContent = 
+            sortOrder === 'desc' ? 'Sort by Price: High to Low' : 'Sort by Price: Low to High';
     });
 });
