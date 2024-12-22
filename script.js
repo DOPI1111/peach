@@ -51,3 +51,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sortButton = document.getElementById('sort-desc');
+    const container = document.querySelector('.container');
+    let sortOrder = 'desc'; // Початковий порядок сортування
+
+    sortButton.addEventListener('click', () => {
+        const cards = Array.from(container.querySelectorAll('.card'));
+
+        // Сортуємо за ціною в залежності від поточного порядку
+        cards.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('.price').textContent.replace('$', ''));
+            const priceB = parseFloat(b.querySelector('.price').textContent.replace('$', ''));
+            return sortOrder === 'desc' ? priceB - priceA : priceA - priceB;
+        });
+
+        // Переміщуємо відсортовані елементи назад у контейнер
+        cards.forEach(card => container.appendChild(card));
+
+        // Змінюємо порядок сортування
+        sortOrder = sortOrder === 'desc' ? 'asc' : 'desc';
+
+        // Оновлюємо текст кнопки
+        sortButton.textContent = 
+            sortOrder === 'desc' ? 'Sort by Price: High to Low' : 'Sort by Price: Low to High';
+    });
+});
