@@ -243,7 +243,10 @@ footer {
     height: auto;
     flex-shrink: 0; /* Не стискає жабок */
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a228e9935a2228e33ebaf50482a00a8bfd88d866
 .sort-controls {
     text-align: center;
     margin: 20px 0;

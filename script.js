@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< HEAD
     const sortToggleButton = document.getElementById('sort-toggle');
     const resetButton = document.getElementById('reset-sort');
     const container = document.querySelector('.container');
@@ -61,6 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Логіка перемикання сортування
     sortToggleButton.addEventListener('click', () => {
+=======
+    const sortButton = document.getElementById('sort-desc');
+    const container = document.querySelector('.container');
+    let sortOrder = 'desc'; // Початковий порядок сортування
+
+    sortButton.addEventListener('click', () => {
+>>>>>>> a228e9935a2228e33ebaf50482a00a8bfd88d866
         const cards = Array.from(container.querySelectorAll('.card'));
 
         // Сортуємо за ціною в залежності від поточного порядку
@@ -77,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sortOrder = sortOrder === 'desc' ? 'asc' : 'desc';
 
         // Оновлюємо текст кнопки
+<<<<<<< HEAD
         sortToggleButton.textContent = 
             sortOrder === 'desc' ? 'Sort by Price: High to Low' : 'Sort by Price: Low to High';
     });
@@ -90,4 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         sortOrder = 'desc';
         sortToggleButton.textContent = 'Sort by Price: High to Low';
     });
+=======
+        sortButton.textContent = 
+            sortOrder === 'desc' ? 'Sort by Price: High to Low' : 'Sort by Price: Low to High';
+    });
+>>>>>>> a228e9935a2228e33ebaf50482a00a8bfd88d866
 });
