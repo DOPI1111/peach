@@ -150,5 +150,13 @@ form button:hover {
         opacity: 0.1;
     }
 }
+.team-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Округлення для аватарки */
+    object-fit: cover; /* Відео адаптується до контейнера */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 /* пофіксити картинку персика(видно тільки половину)*/
